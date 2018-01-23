@@ -16,7 +16,9 @@ public class Account {
     }
 
     public void withdraw(int i){
-        setBalance(this.getBalance()-i);
+        if(i<=this.getBalance()) {
+            setBalance(this.getBalance() - i);
+        }
 
     }
 
