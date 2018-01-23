@@ -8,7 +8,7 @@ public class Factorial {
         }
 
         if(i>0){
-            return i;
+            return i*compute(i-1);
         }
 
         return -1;
