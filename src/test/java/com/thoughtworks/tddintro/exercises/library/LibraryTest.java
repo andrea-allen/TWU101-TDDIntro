@@ -32,20 +32,17 @@ public class LibraryTest {
     }
 
     @Test
-    // Remove each @Ignore and implement test
     public void shouldPrintBookTitleWhenThereIsOneBook() {
         String title = "Book Title";
         books.add(title);
 
         library.listBooks();
 
-        // add a verify statement here that shows that the book title was printed by the printStream
         //This verify statement causes the test to pass:
         verify(printStream).println("Book Title"+"\n");
     }
 
     @Test
-    // Remove each @Ignore and implement test
     public void shouldPrintNothingWhenThereAreNoBooks() {
 
         library.listBooks();
@@ -56,9 +53,7 @@ public class LibraryTest {
     }
 
     @Test
-    // Remove each @Ignore and implement test
     public void shouldPrintBothBookTitlesWhenThereAreTwoBooks() throws IOException {
-        // implement me
         String title1 = "Book 1";
         String title2 = "Book 2";
 
@@ -79,11 +74,9 @@ public class LibraryTest {
     }
 
     @Test
-    // Remove each @Ignore and implement test
     public void shouldDeleteBookFromCollectionWhenRemovedByUser() throws IOException {
-        // Add when/thenReturn here
         when(bufferedReader.readLine()).thenReturn("The Two Towers");
-        //Added, now the test works.
+        //Added when/thenReturn statement, now the test works.
 
         books.add("The Two Towers");
         library.removeBook();

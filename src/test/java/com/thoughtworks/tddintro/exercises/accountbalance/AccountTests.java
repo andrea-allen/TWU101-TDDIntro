@@ -8,7 +8,6 @@ import static org.junit.Assert.assertThat;
 
 public class AccountTests {
     @Test
-    // Remove each @Ignore and implement test
     public void shouldIncreaseMyBalanceWhenIDepositMoney(){
 
         Account account = new Account(100);
@@ -19,7 +18,6 @@ public class AccountTests {
     }
 
     @Test
-    // Remove each @Ignore and implement test
     public void shouldDecreaseMyBalanceWhenIWithdrawMoney(){
 
         Account account = new Account(100);
@@ -31,7 +29,6 @@ public class AccountTests {
     }
 
     @Test
-    // Remove each @Ignore and implement test
     public void shouldNotDecreaseMyBalanceWhenIWithdrawMoneyAndDoNotHaveEnoughToCoverTheWithdrawal(){
 
         Account account = new Account(50);
