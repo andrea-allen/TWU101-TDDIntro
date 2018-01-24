@@ -38,7 +38,6 @@ public class LibraryTest {
 
         library.listBooks();
 
-        //This verify statement causes the test to pass:
         verify(printStream).println("Book Title"+"\n");
     }
 
@@ -49,7 +48,6 @@ public class LibraryTest {
 
         verify(printStream).println("");
 
-        //now this test passes, printStream printed an empty string since no books were added.
     }
 
     @Test
@@ -76,7 +74,6 @@ public class LibraryTest {
     @Test
     public void shouldDeleteBookFromCollectionWhenRemovedByUser() throws IOException {
         when(bufferedReader.readLine()).thenReturn("The Two Towers");
-        //Added when/thenReturn statement, now the test works.
 
         books.add("The Two Towers");
         library.removeBook();
